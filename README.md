@@ -14,7 +14,7 @@ The Health Centre Management System is a software application designed to manage
 The system uses the following data structures:
 - **Patient**: Contains patient details such as name, date of birth, address, patient number, registered doctor as well as a list of appointments.
 - **Appointment**: Contains appointment details such as appointment ID, date and time, doctor, status, as well as a list of prescriptions.
-- **Doctor**: Contains doctor details such as name and a list of appointments.
+- **Doctor**: Contains doctor details such as name as well as a list of appointments.
 - **Receptionist**: Contains receptionist details such as name.
 
 ## Installation
