@@ -1,7 +1,7 @@
 # Health Centre Management System
 
 ## Overview
-The Health Centre Management System is a software application designed to manage the operations of a local health centre. It allows for the registration of patients, booking and cancelling appointments, managing doctors, and recording appointment outcomes and prescriptions. The system aims to streamline the workflow of health centre staff and improve patient experience.
+The Health Centre Management System is a software application designed to manage the operations of a local health centre. It allows for the registration of patients, booking and cancelling appointments, managing doctors, and recording appointment outcomes and prescriptions. The system aims to streamline the workflow of health centre staff and improve patient experience. 
 
 ## Features
 - **Patient Registration**: Receptionists can register new patients and assign them unique patient numbers.
@@ -12,7 +12,7 @@ The Health Centre Management System is a software application designed to manage
 
 ## Data Structures
 The system uses the following data structures:
-- **Patient**: Contains patient details such as name, date of birth, address, patient number, registered doctor, and a list of appointments.
+- **Patient**: Contains patient details such as name, date of birth, address, patient number, registered doctor as well as a list of appointments.
 - **Appointment**: Contains appointment details such as appointment ID, date and time, doctor, status, and a list of prescriptions.
 - **Doctor**: Contains doctor details such as name and a list of appointments.
 - **Receptionist**: Contains receptionist details such as name.
