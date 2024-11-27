@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Afya Mashinani</title>
+        
+
+        <!--==Styles==-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script type="module" src="firebaseauth.js"></script>
+    </head>
+    <body>
+        <!-- ===Navigation== -->
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">DashBoard</span>
+                         </a>
+                            </li>
+                            
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                                <span class="title">Patient</span>
+                                 </a>
+                                 <!-- Add Sign Up Button -->
+                                 
+                                    <h4 class="form-title">Register</h4>
+                                    <form method="post" action="">
+                                      
+                                      <div class="input-group">
+                                         <i class="fas fa-user"></i>
+                                         <input type="text"  id="fName" placeholder="First Name" required>
+                                         <label for="fname">First Name</label>
+                                      </div>
+                                      
+                                      <div class="input-group">
+                                          <i class="fas fa-envelope"></i>
+                                          <input type="email"  id="rEmail" placeholder="Email" required>
+                                          <label for="rEmail">Email</label>
+                                      </div>
+                                      <div class="input-group">
+                                          <i class="fas fa-lock"></i>
+                                          <input type="password" id="rPassword"  placeholder="Password" required>
+                                          <label for="rPassword">Password</label>
+                                      </div>
+                                      
+                                     <button type="submit" >Sign Up</button>
+                                    </form>
+                                    <p class="or">
+                                            ----------or--------
+                                          </p>
+                                          <div class="icons">
+                                            <i class="fab fa-google"></i>
+                                            <i class="fab fa-facebook"></i>
+                                          </div>
+                                          <div class="links">
+                                            <p>Already Have Account ?</p>
+                                            <button id="signInButton">Sign In</button>
+                                          </div>
+                                        </div>
+                                    
+                                      <div class="container" id="signIn">
+                                            <h4 class="form-title">Sign In</h4>
+                                            <form method="post" action="">
+                                            
+                                              <div class="input-group">
+                                                  <i class="fas fa-envelope"></i>
+                                                  <input type="email"  id="email" placeholder="Email" required>
+                                                  <label for="email">Email</label>
+                                              </div>
+                                              <div class="input-group">
+                                                  <i class="fas fa-lock"></i>
+                                                <input type="password" id="password"  placeholder="Password" required>
+                                                  <label for="password">Password</label>
+                                              </div>
+                                              <p class="recover">
+                                                <a href="#">Recover Password</a>
+                                              </p>
+                                             <button  type="submit">Sign In</button>
+                                            </form>
+                                            <p class="or">
+                                              ----------or--------
+                                            </p>
+                                            <div class="links">
+                                              <p>Don't have account yet?</p>
+                                              <button id="signUpButton">Sign Up</button>
+                                            </div>
+                                          </div>
+                                    </li>
+                                    </ul>
+                                    <ul>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+                                        <span class="title">Help</span>
+                                         </a>
+                                            </li>
+                                            
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                                        <span class="title">Messages</span>
+                                         </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                                                <span class="title">Settings</span>
+                                                 </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                                                        <span class="title">Password</span>
+                                                         </a>
+                                                            </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                                                        <span class="title">Sign Out</span>
+                                                         </a>
+                                                            </li>
+                                                        </ul>
+            </div>
+        </div>
+
+        <!--==MAin==-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>  
+                </div>
+                <div class="search">
+                    <label>
+                    <input type="text" placeholder="Search here...">
+                    <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="assets/imgs/customer1.jpeg" alt="">
+                </div>
+                <!--====Cards====-->
+                <div class="cardsBox">
+                    <div class="card">
+                        <div class="numbers">150</div>
+                        <div class="cardName">Daily Patients</div>
+                    </div>
+                    <div class="cardsBox">
+                        <div class="card">
+                            <div class="numbers">30</div>
+                            <div class="cardName">Doctors</div>
+                        </div>
+                        <div class="cardsBox">
+                            <div class="card">
+                                <div class="numbers">5</div>
+                                <div class="cardName">Receptionist</div>
+                            </div>
+                </div>
+                <!---====Patient Detail List===-->
+                <div class="patientDetailList">
+                    <div class="patientDetail">
+                        <div class="patientName">
+                            <h2>Recent Patients</h2>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Patient Name</td>
+                                    <td>Date</td>
+                                    <td>Gender</td>
+                                    <td>Age</td>
+                                    <td>Payment</td>
+                                    <td>Status</td>
+                                
+                                </tr>
+                                <tbody>
+                                    <tr>
+                                        <td>John</td>
+                                        <td>12/09/2024</td>
+                                        <td>Male</td>
+                                        <td>20yrs</td>
+                                        <td>Paid</td>
+                                        <td><span class="status onprogress">In Progress</span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Doe</td>
+                                        <td>12/09/2024</td>
+                                        <td>Male</td>
+                                        <td>20yrs</td>
+                                        <td>Paid</td>
+                                        <td><span class="status onprogress">In Progress</span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Smith</td>
+                                        <td>20/09/2024</td>
+                                        <td>Male</td>
+                                        <td>18yrs</td>
+                                        <td>Paid</td>
+                                        <td><span class="status Cleared">Cleared</span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Adrian</td>
+                                        <td>12/09/2024</td>
+                                        <td>Male</td>
+                                        <td>29yrs</td>
+                                        <td>Paid</td>
+                                        <td><span class="status onprogress">In Progress</span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Peterson</td>
+                                        <td>12/09/2024</td>
+                                        <td>Male</td>
+                                        <td>20yrs</td>
+                                        <td>Not Paid</td>
+                                        <td><span class="status onprogress">In Progress</span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Jayson</td>
+                                        <td>10/09/2024</td>
+                                        <td>Male</td>
+                                        <td>35yrs</td>
+                                        <td>Paid</td>
+                                        <td><span class="status onprogress">In Progress</span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Maggie</td>
+                                        <td>12/09/2024</td>
+                                        <td>Female</td>
+                                        <td>50yrs</td>
+                                        <td>pending</td>
+                                        <td><span class="status Admitted">Admitted</span></td>
+                                    
+                                    </tr>
+                                    <tr>
+                                        <td>Jane</td>
+                                        <td>12/09/2024</td>
+                                        <td>Female</td>
+                                        <td>30yrs</td>
+                                        <td>Paid</td>
+                                        <td><span class="status Referred"> Referred</span></td>
+                                    
+                                    </tr>
+                                </tbody>
+                            </thead>
+                            <!---===New Patients===-->
+                            <div class="RecentPatients">
+                                <div class="CardHeader">
+                                <h2>Recent Patients</h2></div>
+
+                                <table>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgBx"><img src="asssets/imgs/customer1.jpeg" alt=""></div>
+                                        </td>
+                                        <td>
+                                            <h4>David<br> <span>Nairobi</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgBx"><img src="asssets/imgs/customer1.jpeg" alt=""></div>
+                                        </td>
+                                        <td>
+                                            <h4>Jane<br> <span>Thika</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgBx"><img src="asssets/imgs/customer2.jpeg" alt=""></div>
+                                        </td>
+                                        <td>
+                                            <h4>Moses<br> <span>Kayole</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgBx"><img src="asssets/imgs/customer1.jpeg" alt=""></div>
+                                        </td>
+                                        <td>
+                                            <h4>Judith<br> <span>Karen</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgBx"><img src="asssets/imgs/customer2.jpeg" alt=""></div>
+                                        </td>
+                                        <td>
+                                            <h4>Joseph<br> <span>Kiambu</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgBx"><img src="asssets/imgs/customer1.jpeg" alt=""></div>
+                                        </td>
+                                        <td>
+                                            <h4>Betty<br> <span>NairobiWest</span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="60px">
+                                            <div class="imgBx"><img src="asssets/imgs/customer2.jpeg" alt=""></div>
+                                        </td>
+                                        <td>
+                                            <h4>Josephine<br> <span>Kitengela</span></h4>
+                                        </td>
+                                    </tr>
+                                        
+                                    </tr>
+                                </table>
+                            </div>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--==Scripts==-->
+        <script src="assets/js/script.js"></script>
+
+        <!---==ionicons==-->
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
